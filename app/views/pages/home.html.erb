@@ -1,0 +1,32 @@
+<div id="slideshow-wrap">
+  <div id="slideshow">
+  <%# @page.images.each do |image| %>
+    <%#= image_tag(image.thumbnail("200x200#c").url) %>
+  <%# end %>
+</div></div>
+
+<% 
+  image_array = []
+  @page.images.each do |image|
+    image_array << "{src: '#{image.url}'}"
+  end
+%>
+<% content_for :javascripts do %>
+
+  <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.cross-slide.min" %>
+  
+  <% javascript_tag do %>
+    $(document).ready(function() {    
+      
+      $(function() {
+        $('#slideshow').crossSlide({
+          sleep: 2,
+          fade: 1
+        }, [
+          <%= image_array.join(', ') %>
+        ])
+      });
+    });
+  <% end %>
+<% end %>
+

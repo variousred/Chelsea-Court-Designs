@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Tinos:400,400italic,700' rel='stylesheet' type='text/css'>
   <title>Chelseacourtdesigns</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>

@@ -8,6 +8,10 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Chelseacourtdesigns
   class Application < Rails::Application
+    
+    ENV['S3_KEY']='AKIAIGXGYSTMIXW7BYIA'
+    ENV['S3_SECRET']='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'
+    ENV['S3_BUCKET']='chelseacourtdesigns'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

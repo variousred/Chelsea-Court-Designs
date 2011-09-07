@@ -2,3 +2,109 @@
   Override default refinery application CSS below.
   Formatting applies to all frontend.
 */
+
+@import url('refinery/application.css');
+
+h1, h2, h3{
+  margin:.5em;
+}
+a{
+  color:#374353;
+}
+
+body {
+  background: #fff;
+  font-family: 'Tinos', serif;;
+  font-size: 13px;
+  line-height: 18px;
+}
+#page_container{
+  margin-top:50px;
+  padding-bottom:75px;
+  border:1px solid #fff;
+  background:#fff;
+  width:1000px;
+  margin:50px auto;
+  -moz-box-shadow: 0px 0px 30px rgba(68,68,68,0.6);
+  -webkit-box-shadow: 0px 0px 30px rgba(68,68,68,0.6);
+  box-shadow: 0px 0px 30px rgba(68,68,68,.3);
+
+  behavior: url(/stylesheets/PIE.htc);
+  position:relative;
+  
+}
+
+/*********** HEADER ***********/
+header{
+  width:570px;
+  border-bottom:2px solid #374353;
+}
+h1#logo{
+  padding-top:55px;
+  text-align:center;
+  background:url("/images/logo.png") no-repeat 50% top;
+  font-size:1.2em;
+  margin-top:40px;
+  font-weight:400;
+  letter-spacing:1px;
+}
+#logo a{
+  text-decoration:none;
+  line-height:1em;
+}
+#logo span{
+  display:block;
+  font-size:70%;
+}
+
+/*********** BODY ***********/
+
+#body_content, #side_body_content {
+  float: left;
+  width: 45%;
+  background: white;
+  color: #333;
+  padding: 20px;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0px;
+}
+
+#menu ul li {
+  float: left;
+  margin-right: 10px;
+}
+
+#menu ul li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+#menu ul li.selected a {
+  font-style:italic;
+  font-weight:normal;
+}
+
+#slideshow{
+  width:696px;
+  height:393px;
+  display:hidden;
+  margin:0 auto;
+}
+#slideshow-wrap{
+  width:1000px;
+  margin-left:-214px;
+}
+/*********** Page ***********/
+
+section#page{
+  width:570px;
+}
+
+/*********** Footer ***********/
+footer{
+  width:570px;
+}
