@@ -14,8 +14,8 @@ a{
 
 body {
   background: #fff;
-  font-family: 'Tinos', serif;;
-  font-size: 13px;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 12px;
   line-height: 18px;
 }
 #page_container{
@@ -37,7 +37,7 @@ body {
 /*********** HEADER ***********/
 header{
   width:570px;
-  border-bottom:2px solid #374353;
+  border-bottom:1px solid #94949f;
 }
 h1#logo{
   padding-top:55px;
@@ -64,7 +64,7 @@ h1#logo{
   width: 42%;
   background: white;
   color: #333;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 
@@ -79,12 +79,13 @@ h1#logo{
   padding: 0px;
   margin:15px 0;
   text-align:center;
+  word-spacing:20px;
 }
 
 #menu ul li {
   display:inline-block;
   float:none;
-  margin-right: 10px;
+  margin-right: 0;
 }
 
 #menu ul li a {
@@ -112,6 +113,31 @@ h1#logo{
 
 section#page{
   width:570px;
+  border-top:1px solid #6d6f7d;
+}
+/*********** About ***********/
+
+.how #body_content p,
+.what #body_content p{
+  display:block;
+  padding:0;
+  margin:0;
+  border:1px solid #fff;
+  float:left;
+  line-height:0;
+  -moz-box-shadow: 0px 2px 5px #c5c7c9;
+  -webkit-box-shadow: 0px 2px 5px #c5c7c9;
+  box-shadow: 0px 2px 5px #c5c7c9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.how #body_content img,
+.what #body_content img{
+  padding:8px;
+  border:1px solid #e3e4e5;
+
 }
 
 /*********** Portfolio ***********/
@@ -140,4 +166,13 @@ section#page{
 footer{
   width:570px;
   margin-top:35px;
+  font-size:90%;
+  line-height:2.2em;
+  text-align:center;
+  position:relative;
+}
+footer img{
+  position:absolute;
+  right:0;
+  top:0;
 }
