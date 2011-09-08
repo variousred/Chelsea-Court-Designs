@@ -1,6 +1,14 @@
+
 <section id='body_content'>
   <%=raw @page[:body] %>
 </section>
 <section id='side_body_content'>
+  <% if @page.level > 0 && @page.siblings %>
+    <%= render(:partial => "/shared/menu", :locals => {
+                 :dom_id => 'menu',
+                 :css => 'menu',
+                 :roots => @page.parent.children
+               }) %>
+  <% end %>
   <%=raw @page[:side_body] %>
 </section>

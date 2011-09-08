@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/engines
+  specs:
+    refinerycms-people (1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -185,5 +190,6 @@ DEPENDENCIES
   refinerycms (~> 1.0.4)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-page-images (~> 1.0)
+  refinerycms-people (= 1.0)!
   ruby-debug19
   sqlite3

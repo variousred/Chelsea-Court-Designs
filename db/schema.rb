@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110831015853) do
+ActiveRecord::Schema.define(:version => 20110908024404) do
+
+  create_table "image_pages", :id => false, :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+  end
+
+  add_index "image_pages", ["image_id"], :name => "index_image_pages_on_image_id"
+  add_index "image_pages", ["page_id"], :name => "index_image_pages_on_page_id"
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -81,6 +91,17 @@ ActiveRecord::Schema.define(:version => 20110831015853) do
   add_index "pages", ["lft"], :name => "index_pages_on_lft"
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
+
+  create_table "people", :force => true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.integer  "photo_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "people", ["id"], :name => "index_people_on_id"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"

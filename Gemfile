@@ -60,3 +60,5 @@ end
 gem 'refinerycms-i18n',         '~> 1.0.0'
 
 # END USER DEFINED
+
+gem 'refinerycms-people', '1.0', :path => 'vendor/engines'
