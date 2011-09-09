@@ -8,8 +8,8 @@ class PeopleController < ApplicationController
     # by swapping @page for @person in the line below:
     
     @person = Person.first
-    
-    present(@page)
+
+    redirect_to @person
   end
 
   def show

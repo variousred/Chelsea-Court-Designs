@@ -6,12 +6,28 @@
 @import url('refinery/application.css');
 
 h1, h2, h3{
-  margin:.5em;
+  margin:.5em 0;
+}
+h1{
+  font-size:1.2em;
+}
+h2{
+  font-size:1.1em;
+  font-weight:normal;
+  margin:0;
 }
 a{
   color:#374353;
 }
 
+ul{
+  margin:0;
+  padding:0;
+}
+
+li{
+  list-style-type:none;
+}
 body {
   background: #fff;
   font-family: 'Sorts Mill Goudy', serif;
@@ -62,14 +78,26 @@ h1#logo{
 #body_content, #side_body_content {
   float: left;
   width: 42%;
-  background: white;
   color: #333;
   padding: 0 20px;
 }
-
+#body_content{
+  float:left;
+  padding:0 0 0 43px;
+}
+#body_content img{
+  float:right;
+  margin-right:20px;
+}
+#side_body_content{
+  font-size:11px;
+  line-height:1.3em;
+}
 
 /*********** Nav Menu ***********/
-
+#menu li ul{
+  display:none;
+}
 
 #menu{
 
@@ -115,29 +143,50 @@ section#page{
   width:570px;
   border-top:1px solid #6d6f7d;
 }
+
+
+.about #side_body_content,
+.services #side_body_content{
+  padding:0 40px 0 0;
+  width:245px;
+  float:right;
+}
+#side_body_content #menu{
+  margin:10px 0;
+}
+#side_body_content #menu ul{
+  text-align:left;
+  margin:0;
+  word-spacing:10px;
+}
+#side_body_content #menu a{
+  padding:0;
+}
+#side_body_content #menu li.selected a{
+  text-decoration:underline;
+}
 /*********** About ***********/
 
-.how #body_content p,
-.what #body_content p{
-  display:block;
-  padding:0;
+#body_content p{
   margin:0;
-  border:1px solid #fff;
-  float:left;
-  line-height:0;
-  -moz-box-shadow: 0px 2px 5px #c5c7c9;
-  -webkit-box-shadow: 0px 2px 5px #c5c7c9;
-  box-shadow: 0px 2px 5px #c5c7c9;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 
 .how #body_content img,
-.what #body_content img{
+.what #body_content img,
+.services #body_content img{
   padding:8px;
   border:1px solid #e3e4e5;
-
+  -moz-box-shadow: 0px 2px 5px #c5c7c9;
+  -webkit-box-shadow: 0px 2px 5px #c5c7c9;
+  box-shadow: 0px 2px 5px #c5c7c9;
+}
+.who h1,
+.who h1 + p{
+  margin:0;
+}
+/*********** Services ***********/
+.services #side_body_content ul{
+  line-height:1.6em;
 }
 
 /*********** Portfolio ***********/
@@ -152,15 +201,36 @@ section#page{
   margin:0;
   line-height:0;
   display:inline-block;
-  border:1px solid #fff;
+  border:1px solid #c5c7c9; 
   -moz-box-shadow: 0px 2px 5px #c5c7c9;
   -webkit-box-shadow: 0px 2px 5px #c5c7c9;
   box-shadow: 0px 2px 5px #c5c7c9;
+    padding:10px;
 }
-#portfolio a img{
-  border:1px solid #c5c7c9;
-  padding:10px;
-  
+
+
+/*********** Contact ***********/
+.contact #body_content{
+  width:300px;
+}
+.contact #side_body_content{
+  width:200px;
+  padding-right:0;
+}
+.contact #body_content img{
+  float:right;
+  padding:15px;
+  border:1px solid #e3e4e5;
+  -moz-box-shadow: 0px 2px 5px #c5c7c9;
+  -webkit-box-shadow: 0px 2px 5px #c5c7c9;
+  box-shadow: 0px 2px 5px #c5c7c9;
+  margin:0;
+}
+.contact #side_body_content h2{
+  margin:30px 0 0 0;
+}
+.contact #side_body_content p{
+  margin:0;
 }
 /*********** Footer ***********/
 footer{
@@ -175,4 +245,151 @@ footer img{
   position:absolute;
   right:0;
   top:0;
+}
+
+/*********** People ***********/
+ul#people{
+  margin:10px 0 0 38px;
+}
+ul#people a{
+  text-decoration:none;
+}
+ul#people a.current{
+  font-weight:bold;
+}
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+#scroller{
+  height:250px;
+}
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3px;
+	height: 100%;
+	background: red;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background: #c9c8ce;
+	position: relative;
+	height:250px;
+}
+
+.jspDrag
+{
+	background: #374353;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	border-bottom:1px solid #fff;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspVerticalBar .jspArrowUp{
+  position:absolute;
+	width:229px;
+	left:-229px;
+	height:100px;
+}
+.jspVerticalBar .jspArrowDown{
+  position:absolute;
+	width:229px;
+	left:-229px;
+	height:100px;
+	bottom:0;
+}
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
 }

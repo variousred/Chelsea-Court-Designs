@@ -7,29 +7,42 @@
   <ul id="people">
     <% @people.each do |person| %>
       <li>
-        <%= link_to person.name, person_path(person) %>
+        <%= link_to person.name, person_path(person), {:class => "#{'current' if current_page?(person_path(person)) }"} %>
       </li>
     <% end %>
   </ul>
 </section>
 <section id='side_body_content'>
-  <% if @page.siblings %>
-    <%= render(:partial => "/shared/menu", :locals => {
-                 :dom_id => 'menu',
-                 :css => 'menu',
-                 :roots => @page.parent.children
-               }) %>
+
+    <% if @page.siblings %>
+      <%= render(:partial => "/shared/menu", :locals => {
+                   :dom_id => 'menu',
+                   :css => 'menu',
+                   :roots => @page.parent.children
+                 }) %>
+    <% end %>
+    <section id="scroller">
+      <div>
+        <h1>
+          <%=raw @person.name %>
+        </h1>
+        <%=raw @person.bio %>
+      </div>
+    </section>
+</section>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.jscrollpane" %>
+  <%= javascript_tag do %>
+  
+  $(function()
+  {
+  	$('#scroller').jScrollPane({
+  	  showArrows:true,
+  	  arrowScrollOnHover: true,
+  	  verticalGutter: 20
+  	});
+  });
+  
   <% end %>
-  <section>
-    <h1>
-      <%=raw @person.name %>
-    </h1>
-    <p>
-      <%=raw @person.bio %>
-    </p>
-  </section></section>
-
-
-<% content_for :body_content_left do %>
-
 <% end %>
