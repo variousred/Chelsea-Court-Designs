@@ -33,8 +33,10 @@ body {
   font-family: 'Sorts Mill Goudy', serif;
   font-size: 12px;
   line-height: 18px;
+  color:#374353;
 }
 #page_container{
+  min-height:578px;
   margin-top:50px;
   padding-bottom:75px;
   border:1px solid #fff;
@@ -53,14 +55,13 @@ body {
 /*********** HEADER ***********/
 header{
   width:570px;
-  border-bottom:1px solid #94949f;
+/*  border-bottom:1px solid #cbccda;*/
 }
 h1#logo{
-  padding-top:55px;
+  padding-top:45px;
   text-align:center;
-  background:url("/images/logo.png") no-repeat 50% top;
   font-size:1.2em;
-  margin:45px 0 15px 0;
+  margin:0 0 15px 0;
   font-weight:400;
   letter-spacing:1px;
 }
@@ -141,7 +142,7 @@ h1#logo{
 
 section#page{
   width:570px;
-  border-top:1px solid #6d6f7d;
+  border-top:1px solid #374353;
 }
 
 
@@ -163,7 +164,11 @@ section#page{
   padding:0;
 }
 #side_body_content #menu li.selected a{
-  text-decoration:underline;
+  font-weight:bold;
+  font-style:normal;
+}
+#side_body_content ul li{
+  list-style:disc inside;
 }
 /*********** About ***********/
 

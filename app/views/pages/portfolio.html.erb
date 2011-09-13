@@ -9,15 +9,6 @@
 <% end %>
 <% content_for :javascripts do %>
   <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.colorbox-min" %>
-  <%= javascript_tag do %>
-  
-  $(function()
-  {
-    $('#portfolio a').colorbox({
-      speed: 500,
-      rel: true
-    });
-  });
-  
-  <% end %>
+  <%= javascript_include_tag "portfolio" %>
+
 <% end %>

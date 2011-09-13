@@ -20,7 +20,7 @@
       
       $(function() {
         $('#slideshow').crossSlide({
-          sleep: 5,
+          sleep: 3.8,
           fade: 1.5
         }, [
           <%= image_array.join(', ') %>
@@ -28,5 +28,8 @@
       });
     });
   <% end %>
+  
+  <%= javascript_include_tag "application" %>
+  
 <% end %>
 
