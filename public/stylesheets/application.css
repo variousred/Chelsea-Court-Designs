@@ -147,8 +147,8 @@ section#page{
 
 .about #side_body_content,
 .services #side_body_content{
-  padding:0 40px 0 0;
-  width:245px;
+  padding:0 20px 0 0;
+  width:265px;
   float:right;
 }
 #side_body_content #sub_menu{
@@ -254,7 +254,7 @@ section#page{
 }
 /*********** Footer ***********/
 footer{
-  width:570px;
+  width:585px;
   margin-top:35px;
   font-size:90%;
   line-height:2.2em;
