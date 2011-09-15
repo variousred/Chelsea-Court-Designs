@@ -16,7 +16,7 @@
 
     <% if @page.siblings %>
       <%= render(:partial => "/shared/menu", :locals => {
-                   :dom_id => 'menu',
+                   :dom_id => 'sub_menu',
                    :css => 'menu',
                    :roots => @page.parent.children
                  }) %>
@@ -31,19 +31,3 @@
     </section>
 </section>
 
-<% content_for :javascripts do %>
-  <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.jscrollpane" %>
-  <%= javascript_tag do %>
-  
-  $(function()
-  {
-  	$('#scroller').jScrollPane({
-  	  showArrows:true,
-  	  arrowScrollOnHover: true,
-  	  verticalGutter: 20,
-  	  arrowButtonSpeed: 3
-  	});
-  });
-  
-  <% end %>
-<% end %>

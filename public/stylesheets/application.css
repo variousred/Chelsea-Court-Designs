@@ -30,7 +30,7 @@ li{
 }
 body {
   background: #fff;
-  font-family: 'Sorts Mill Goudy', serif;
+  font-family: 'Georgia', serif;
   font-size: 12px;
   line-height: 18px;
   color:#374353;
@@ -79,7 +79,6 @@ h1#logo{
 #body_content, #side_body_content {
   float: left;
   width: 42%;
-  color: #333;
   padding: 0 20px;
 }
 #body_content{
@@ -152,18 +151,18 @@ section#page{
   width:245px;
   float:right;
 }
-#side_body_content #menu{
-  margin:10px 0;
+#side_body_content #sub_menu{
+  margin:5px 0 10px 0;
 }
-#side_body_content #menu ul{
+#side_body_content #sub_menu ul{
   text-align:left;
   margin:0;
   word-spacing:10px;
 }
-#side_body_content #menu a{
+#side_body_content #sub_menu a{
   padding:0;
 }
-#side_body_content #menu li.selected a{
+#side_body_content #sub_menu li.selected a{
   font-weight:bold;
   font-style:normal;
 }
@@ -176,8 +175,7 @@ section#page{
   margin:0;
 }
 
-.how #body_content img,
-.what #body_content img,
+.about #body_content img,
 .services #body_content img{
   padding:8px;
   border:1px solid #e3e4e5;
@@ -185,9 +183,26 @@ section#page{
   -webkit-box-shadow: 0px 2px 5px #c5c7c9;
   box-shadow: 0px 2px 5px #c5c7c9;
 }
+.about.who #body_content img{
+  padding:0;
+  border:none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .who h1,
 .who h1 + p{
   margin:0;
+}
+#sub_menu ul li{
+  list-style-type:none;
+  width:5em;
+}
+#sub_menu li a{
+  text-decoration:none;
+}
+.about #scroller{
+  height:286px;
 }
 /*********** Services ***********/
 .services #side_body_content ul{
@@ -269,8 +284,8 @@ ul#people a.current{
  * may not operate correctly without them.
  */
 
-#scroller{
-  height:250px;
+.about.who #scroller{
+  height:245px;
 }
 
 .jspContainer

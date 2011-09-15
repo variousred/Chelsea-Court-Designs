@@ -5,10 +5,10 @@
 <section id='side_body_content'>
   <% if @page.level > 0 && @page.siblings %>
     <%= render(:partial => "/shared/menu", :locals => {
-                 :dom_id => 'menu',
+                 :dom_id => 'sub_menu',
                  :css => 'menu',
                  :roots => @page.parent.children
                }) %>
   <% end %>
-  <%=raw @page.content_for :side_body %>
+  <section id="scroller"><%=raw @page.content_for :side_body %></section>
 </section>

@@ -1,3 +1,12 @@
+
+<% content_for :javascript_libraries do %>
+  <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.jscrollpane" %>  
+<% end %>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "application" %>
+<% end %>
+
 <!DOCTYPE html>
 <%= render :partial => "/shared/html_tag" %>
   <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
