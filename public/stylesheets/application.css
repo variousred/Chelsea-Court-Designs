@@ -151,6 +151,10 @@ section#page{
   width:265px;
   float:right;
 }
+.services #side_body_content{
+  padding:0;
+  width:285px;
+}
 #side_body_content #sub_menu{
   margin:5px 0 10px 0;
 }
@@ -254,7 +258,7 @@ section#page{
 }
 /*********** Footer ***********/
 footer{
-  width:585px;
+  width:625px;
   margin-top:35px;
   font-size:90%;
   line-height:2.2em;
