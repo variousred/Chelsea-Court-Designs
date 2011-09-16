@@ -30,7 +30,7 @@ li{
 }
 body {
   background: #fff;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 12px;
   line-height: 18px;
   color:#374353;
@@ -238,7 +238,7 @@ section#page{
   width:300px;
 }
 .contact #side_body_content{
-  width:200px;
+  width:207px;
   padding-right:0;
 }
 .contact #body_content img{
@@ -260,7 +260,7 @@ section#page{
 footer{
   width:625px;
   margin-top:35px;
-  font-size:90%;
+  font-size:88%;
   line-height:2.2em;
   text-align:center;
   position:relative;
