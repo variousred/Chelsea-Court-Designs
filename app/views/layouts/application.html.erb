@@ -1,4 +1,23 @@
 
+<!DOCTYPE html>
+  <body class="<%= page_class %>">
+
+    <div id="page_container">
+      <header>
+      </header>
+      <section id='page'>
+        <img src="/images/construction.jpg">
+      </section>
+      <footer>
+      </footer>
+    </div>
+  </body>
+</html>
+
+
+
+
+<% if false %>
 <% content_for :javascript_libraries do %>
   <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.jscrollpane" %>  
 <% end %>
@@ -33,3 +52,4 @@
     <%= render :partial => "/shared/javascripts" %>
   </body>
 </html>
+<% end %>
