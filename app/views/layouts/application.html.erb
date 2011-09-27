@@ -1,5 +1,4 @@
-<%= request.domain %>
-<% if true %>
+<% if request.domain == "chelseacourtdesigns.com" %>
 <!DOCTYPE html>
   <body class="<%= page_class %>">
 
@@ -17,7 +16,7 @@
 
 <% end %>
 
-<% if false %>
+<% if request.domain == "heroku.com" %>
 <% content_for :javascript_libraries do %>
   <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.jscrollpane" %>  
 <% end %>
