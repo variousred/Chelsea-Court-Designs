@@ -1,4 +1,5 @@
 
+<% if false %>
 <!DOCTYPE html>
   <body class="<%= page_class %>">
 
@@ -14,10 +15,9 @@
   </body>
 </html>
 
+<% end %>
 
 
-
-<% if false %>
 <% content_for :javascript_libraries do %>
   <%= javascript_include_tag "http://code.jquery.com/jquery.min.js", "jquery.jscrollpane" %>  
 <% end %>
@@ -52,4 +52,3 @@
     <%= render :partial => "/shared/javascripts" %>
   </body>
 </html>
-<% end %>

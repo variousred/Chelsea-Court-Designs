@@ -5,7 +5,6 @@ $(function(){
   $('#page_container').css({'height':'575px','overflow':'hidden'}).animate({
                                                                     height: fullHeight
   }, 3000);
-  $('#page_container').animate();
   $('#portfolio a').colorbox({
     speed: 500,
     rel: true
